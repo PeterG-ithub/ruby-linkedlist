@@ -35,6 +35,7 @@ class LinkedList
     current_node
   end
 
+  # removes the last element from the list
   def pop
     current_node = @head
     (@size - 2).times do
@@ -43,5 +44,15 @@ class LinkedList
     @tail = current_node
     @tail.next = nil
     @size -= 1
+  end
+
+  def contains?(value)
+    current_node = @head
+    size.times do
+      return true if current_node.data == value
+
+      current_node = current_node.next
+    end
+    false
   end
 end
