@@ -46,6 +46,7 @@ class LinkedList
     @size -= 1
   end
 
+  # returns true if the passed in value is in the list and otherwise returns false.
   def contains?(value)
     current_node = @head
     size.times do
@@ -54,5 +55,17 @@ class LinkedList
       current_node = current_node.next
     end
     false
+  end
+
+  # returns the index of the node containing value, or nil if not found.
+  def find(value)
+    current_node = @head
+    index = 0
+    size.times do
+      return index if current_node.data == value
+
+      current_node = current_node.next
+      index += 1
+    end
   end
 end

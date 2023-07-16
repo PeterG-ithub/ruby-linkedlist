@@ -20,9 +20,12 @@ list.prepend('I am the head now')
 
 p list.at(2)
 p list.at(4)  
-p list.pop
+list.pop
 p list.contains?(100)
 p list.contains?(99)
+p list.size
+p list.find(99)
+p list.find('I am the head now')
 p list
 # p list.at(5) #Should give an error, not sure if I should make this nil or keep the error
 #p list.head
