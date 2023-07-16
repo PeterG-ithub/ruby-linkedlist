@@ -2,11 +2,12 @@
 
 # linked list class implementation in ruby
 class LinkedList
-  attr_accessor :head, :tail
+  attr_accessor :head, :tail, :size
 
   def initialize(data = nil)
     @head = Node.new(data)
     @tail = @head
+    @size = 1
   end
 
   # adds a new node containing value to the END of the list
@@ -14,6 +15,7 @@ class LinkedList
     new_node = Node.new(value)
     @tail.next = new_node
     @tail = new_node
+    @size += 1
   end
 
   # adds a new node containing value to the start of the list
@@ -21,5 +23,6 @@ class LinkedList
     new_node = Node.new(value)
     new_node.next = @head
     @head = new_node
+    @size += 1
   end
 end

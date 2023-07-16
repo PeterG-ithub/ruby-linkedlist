@@ -16,4 +16,5 @@ list.append([*1..9])
 list.prepend('I am the head now')
 p list.head
 p list.tail
+p list.size
 p 'finish'
