@@ -17,7 +17,10 @@ list.prepend('I am the head now')
 
 p list.at(2)
 p list.at(4)  
-p list.at(5) #Should give an error, not sure if I should make this nil or keep the error
+p list.pop
+
+p list
+# p list.at(5) #Should give an error, not sure if I should make this nil or keep the error
 #p list.head
 #p list.tail
 #p list.size

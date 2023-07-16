@@ -34,4 +34,14 @@ class LinkedList
     end
     current_node
   end
+
+  def pop
+    current_node = @head
+    (@size - 2).times do
+      current_node = current_node.next
+    end
+    @tail = current_node
+    @tail.next = nil
+    @size -= 1
+  end
 end
