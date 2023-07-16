@@ -25,4 +25,13 @@ class LinkedList
     @head = new_node
     @size += 1
   end
+
+  #  returns the node at the given index, head index is at 0
+  def at(index)
+    current_node = @head
+    index.times do
+      current_node = current_node.next
+    end
+    current_node
+  end
 end
