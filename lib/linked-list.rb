@@ -67,5 +67,20 @@ class LinkedList
       current_node = current_node.next
       index += 1
     end
+    nil
+  end
+
+  def to_s
+    values = []
+    current_node = @head
+    size.times do
+      values << current_node.data
+      current_node = current_node.next
+    end
+
+    values.each do |value|
+      print "( #{value} ) -> "
+    end
+    print "nil\n"
   end
 end
