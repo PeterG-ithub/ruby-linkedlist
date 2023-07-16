@@ -13,5 +13,7 @@ list = LinkedList.new(17)
 list.append(%w[a b c d e f])
 list.append([*1..9])
 
+list.prepend('I am the head now')
+p list.head
 p list.tail
 p 'finish'
